@@ -1,4 +1,5 @@
-### MOCKUPS
+## MOCKUPS
+### RESERVAS
 #### MOCKUP DE VENTANA DE RESERVAS
 - Al momento de realizar una reserva se da la opcion de 'Reserva Rapida' donde se podrá buscar y elegir de manera rápida la tienda (o casera) de donde queremos realizar dicha reserva.
 ##### PASOS PARA LA RESERVA
