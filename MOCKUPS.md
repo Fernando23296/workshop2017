@@ -11,6 +11,7 @@
 #### MOCKUP DE INICIO DE SESION
 - Cuando un cliente registrado desea ingresar al servicio, este debe registrarse en la pagina de inicio de sesion para poder realizar los pedidos respectivos. <img width="712" alt="captura de pantalla 2017-09-20 a la s 00 43 35" src="https://user-images.githubusercontent.com/30901252/30629234-cb21fc82-9da8-11e7-8df2-1d231a8c5a06.png">
 Para poder realizar un registro exitoso, el usuario debe colocar su nombre de usuario y su contraseña, para confirmar su registro deberá presionar el boton registrarse de tal manera el sistema buscara la informacion del usuario y permitira el acceso de ser validos los campos nombre de usuario y contraseña, sin embargo cuando se presione el boton registrarse se producira un error devolviendo al usuario a la pagina incial de registro.
+
 #### MOCKUP DE REGISTRO DE CLIENTE NUEVO
 - Cuando un usuario nuevo quiere registrarse en el sistema, este sera dirigido a la siguiente vista.
 <img width="712" alt="captura de pantalla 2017-09-20 a la s 00 43 35" src="https://user-images.githubusercontent.com/30901252/30629509-3d6f4b18-9daa-11e7-9570-dbb5e1373c5e.png">
