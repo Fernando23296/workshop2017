@@ -14,17 +14,16 @@ class CreateIncomesDetailsTable extends Migration
     public function up()
     {
         Schema::create('incomes_details', function (Blueprint $table) {
-            $table->string('iddetalle_ingreso',15)->primary();
-
+            $table->integer('iddetalle_ingreso')->primary();
             $table->integer('cantidad');
             $table->decimal('precio_compra',11,2);
 
-            $table->string('idingreso',15)->unsigned();
+            $table->integer('idingreso')->unsigned();
             $table->foreign('idingreso')
                   ->references('idingreso')
                   ->on('entries');
 
-            $table->string('idproducto',15)->unsigned();
+            $table->integer('idproducto')->unsigned();
             $table->foreign('idproducto')
                   ->references('idproducto')
                   ->on('products');

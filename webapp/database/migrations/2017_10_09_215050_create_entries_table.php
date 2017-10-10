@@ -16,7 +16,7 @@ class CreateEntriesTable extends Migration
         Schema::create('entries', function (Blueprint $table) {
             
 
-            $table->string('idingreso',15)->primary();
+            $table->integer('idingreso')->primary();
 
             $table->string('tipo_comprobante',20);
             $table->string('serie_comprobante',7);
@@ -25,7 +25,7 @@ class CreateEntriesTable extends Migration
             $table->decimal('impuesto', 4,2);
             $table->string('estado',20);
 
-            $table->string('idproveedor',15)->unsigned();
+            $table->integer('idproveedor')->unsigned();
             $table->foreign('idproveedor')
                   ->references('idpersona')
                   ->on('people');

@@ -14,18 +14,19 @@ class CreateSalesDetailsTable extends Migration
     public function up()
     {
         Schema::create('sales_details', function (Blueprint $table) {
-            $table->string('iddetalle_venta',15)->primary();
+
+            $table->integer('iddetalle_venta')->primary();
 
             $table->integer('cantidad');
             $table->decimal('precio_venta',11,2);
             $table->decimal('descuento',11,2);
 
-            $table->string('idventa',15)->unsigned();
+            $table->integer('idventa')->unsigned();
             $table->foreign('idventa')
                   ->references('idventa')
                   ->on('sales');
 
-            $table->string('idproducto',15)->unsigned();
+            $table->integer('idproducto')->unsigned();
             $table->foreign('idproducto')
                   ->references('idproducto')
                   ->on('products');

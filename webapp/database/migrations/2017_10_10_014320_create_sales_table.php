@@ -16,7 +16,7 @@ class CreateSalesTable extends Migration
         Schema::create('sales', function (Blueprint $table) {
 
 
-            $table->string('idventa',15)->primary();
+            $table->integer('idventa')->primary();
 
             $table->string('tipo_comprobante',20);
             $table->string('serie_comprobante',7);
@@ -24,7 +24,7 @@ class CreateSalesTable extends Migration
             $table->dateTime('fecha_hora');
             $table->decimal('impuesto', 4,2);
 
-            $table->string('idcliente',15)->unsigned();
+            $table->integer('idcliente')->unsigned();
             $table->foreign('idcliente')
                   ->references('idpersona')
                   ->on('people');

@@ -16,7 +16,7 @@ class CreateStoresTable extends Migration
         Schema::create('stores', function (Blueprint $table) {
             
 
-            $table->string('idlocal',15)->primary();
+            $table->integer('idlocal')->primary();
 
             $table->string('nombre',50);
             $table->string('descripcion',256);

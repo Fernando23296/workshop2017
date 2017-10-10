@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->string('idproducto',15)->primary();
+            $table->integer('idproducto')->primary();
 
             $table->string('codigo',50);
             $table->string('nombre',100);
@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('imagen', 50);
             $table->string('estado',20);
 
-            $table->string('idlocal',15)->unsigned();
+            $table->integer('idlocal')->unsigned();
             $table->foreign('idlocal')
                   ->references('idlocal')
                   ->on('stores');
