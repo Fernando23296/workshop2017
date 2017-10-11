@@ -19,6 +19,7 @@ class CreateStoresTable extends Migration
             $table->integer('idlocal')->primary();
             $table->string('nombre',50);
             $table->string('slug');
+            $table->string('imagen', 150);
             $table->string('descripcion',256);
             $table->tinyInteger('condicion');
         

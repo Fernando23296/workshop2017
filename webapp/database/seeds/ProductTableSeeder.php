@@ -19,6 +19,7 @@ class ProductTableSeeder extends Seeder
 				'stock' =>'15',
 				'descripcion' =>'Empanada cubierta de carne',
 				'imagen' =>'http://www.sintagmas.com.ar/imagen/S525037empanadas.jpg',
+				'precio' =>'5',
 				'estado' =>'1',
 				'idlocal'=>'1'
 			],
@@ -34,6 +35,7 @@ class ProductTableSeeder extends Seeder
 				'stock' =>'20',
 				'descripcion' =>'Empanada cubierta de carne y huevo',
 				'imagen' =>'http://www.sintagmas.com.ar/imagen/S525037empanadas.jpg',
+				'precio' =>'6',
 				'estado' =>'1',
 				'idlocal'=>'2'
 			],

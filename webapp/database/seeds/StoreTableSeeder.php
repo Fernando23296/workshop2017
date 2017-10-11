@@ -15,6 +15,7 @@ class StoreTableSeeder extends Seeder
 				'idlocal' => '1',
 				'nombre' => 'Tucumanas La Marta',
 				'slug' => 'tucumanas-la-martita',
+				'imagen' => 'http://volketa.org/wp-content/uploads/2011/05/empanadas1.jpg',
 				'descripcion' => 'Las mas ricas tucumanas de la calle 2 de obrajes.',
 				'condicion' =>'1'
 			],
@@ -23,6 +24,7 @@ class StoreTableSeeder extends Seeder
 				'idlocal' => '2',
 				'nombre' => 'Tucumanas Clemencia',
 				'slug' => 'tucumanas-clemencia',
+				'imagen' => 'https://media-cdn.tripadvisor.com/media/photo-s/03/36/0f/ab/el-caminito-empanadas.jpg',
 				'descripcion' => 'Las primeras tucumanas de la calle 2 de obrajes.',
 				'condicion' =>'1'
 			],

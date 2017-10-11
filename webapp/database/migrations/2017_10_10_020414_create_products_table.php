@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock');
             $table->string('descripcion',512);
             $table->string('imagen', 150);
+            $table->integer('precio');
             $table->string('estado',20);
 
             $table->integer('idlocal')->unsigned();
