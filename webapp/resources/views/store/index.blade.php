@@ -1,6 +1,9 @@
 @extends('store.template')
 
 @section('content')
+
+
+
 <div class="container text-center">
 	
 	<div id="products">
