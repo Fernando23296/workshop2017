@@ -1,5 +1,4 @@
-<?php
-
+<?php  
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +9,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::bind('product', function($slug){
+	return App\Models\Product::where('slug', $slug)->first();	
+});
 
 Route::get('/',[
 
@@ -23,3 +26,15 @@ Route::get('product/{slug}',[
 	'uses'=>'StoreController@show'
 ]);
 
+//carrito
+Route::get('cart/show',[
+
+	'as' => 'cart-show',
+	'uses'=>'CartController@show'
+
+
+	]);
+Route::get('cart/add/{product}',[
+	'as' => 'cart-add',
+	'uses' => 'CartController@add'
+	]);

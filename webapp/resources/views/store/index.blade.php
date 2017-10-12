@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+@include('store.partials.slider')
 
 <div class="container text-center">
 	

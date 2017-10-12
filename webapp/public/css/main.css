@@ -82,3 +82,10 @@ transition: all 0.3s ease-in-out;
 	border-radius: 1em;
 	padding: 1em;
 }
+
+/*slider*/
+
+.navbar
+{
+	margin-bottom: 0;
+}
