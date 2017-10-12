@@ -34,7 +34,25 @@
 						<td><img src="{{$item->imagen}}"></td>
 						<td>{{$item->nombre}}</td>
 						<td>Bs.{{number_format($item->precio,2)}}</td>
-						<td>{{$item->quantity}}</td>
+						<td>
+							<input 
+								type="number"
+								min="1"
+								max="100"
+								value="{{$item->quantity}}"
+								id="product_{{$item->idproducto}}"
+								>
+							<a 
+								href="#" 
+								class="btn btn-warning btn-update-item"
+								data.href="{{route('cart-update', $item->slug)}}"
+								data.id="{{¢item->id}}"
+							>
+								<i class="fa fa -refresh"></i>		
+							</a>		
+						</td>
+
+
 						<td>Bs.{{number_format($item->precio * $item->quantity,2)}}</td>
 						<td>
 								<a href="{{route('cart-delete', $item->slug)}}" class="btn btn-danger">

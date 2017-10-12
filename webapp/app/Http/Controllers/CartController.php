@@ -48,13 +48,21 @@ class CartController extends Controller
     }    
     //UPDATE ITEM
     
+    public function update(Product $product, $quantity)
+    {
+    	$cart = \Session::get('cart');
+    	$cart[$product->slug]->quantity =$quantity;
+    	\Session::put('cart',$cart);
+		return redirect()->route('cart-show');    	
+    }
+
     //TRASH CART
 
     public function trash()
     {
     	\Session::forget('cart');
     	return redirect()->route('cart-show');
-    	
+
     }
 
     //TOTAL
