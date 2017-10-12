@@ -1,0 +1,42 @@
+body
+{
+	background: orange;
+}
+/*nav*/
+.main-title
+{
+	color:orange !important;
+	font-size: 22px;
+}
+
+/* footer...*/
+
+footer
+{
+	background: #222;
+	text-align: center;
+}
+
+footer p
+{
+	text-align: justify;
+}
+
+ul.redes li
+{
+	display: inline-block;
+}
+
+ul.redes li a
+{
+	color: orange;
+}
+
+.avatar
+{
+	border: 5px solid orange;
+	border-radius: 50%;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
