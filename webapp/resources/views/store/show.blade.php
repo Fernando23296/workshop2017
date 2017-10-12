@@ -1,16 +1,17 @@
 @extends('store.template')
 
 @section('content')
-	<h1>Detalle de la tienda</h1>
+	<h1>Detalle del producto/h1>
 
-	<div class="store-block">
-		<img src="{{$store->imagen}}" width="300">
+	<div class="product-block">
+		<img src="{{$product->imagen}}" width="300">
 	</div>
 
-	<div class="store-block">
-		<h3>{{$store->nombre}}</h3><hr>
-		<div class="store-info">
-			<p>{{$store->descripcion}}</p>
+	<div class="product-block">
+		<h3>{{ $product->nombre }}</h3><hr>
+		<div class="product-info">
+			<p>{{ $product->descripcion }}</p>
+			<p> Precio: {{ $product->precio }}</p>
 			<p>
 				<a href="#">La quiero</a>
 				</p>

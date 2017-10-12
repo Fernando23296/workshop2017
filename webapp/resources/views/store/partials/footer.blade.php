@@ -8,7 +8,7 @@
 	<div class="col-md-4">
 		<h3>developed by erick and bruno</h3>
 		<div class="author-info">
-			<img src="">
+			<img src="#" alt="" class="avatar">
 			<p>asdas das das d as d as das d a das d as d asda s das d asd asd</p>
 		</div>
 	</div>
@@ -26,5 +26,5 @@
 		<i class="fa fa-at"></i><a href="#">tucus@gmail.com</a>
 		</div>
 		</div>
-		</div>
+		</footer>
 

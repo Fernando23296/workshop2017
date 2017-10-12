@@ -6,22 +6,22 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\Store;
+use App\Models\Product;
 
 class StoreController extends Controller
 {
     //
     public function index()
     {
-    	$stores= Store::all();
+    	$products= Product::all();
     	//dd($stores);
-    	return view('store.index',compact('stores'));
+    	return view('store.index',compact('products'));
     }
 
     public function show($slug)
     {
-    	$store = Store::where('slug', $slug)->first();
+    	$product = Product::where('slug', $slug)->first();
     	//dd($store);
-    	return view('store.show',compact('store'));
+    	return view('store.show',compact('product'));
     }
 }
