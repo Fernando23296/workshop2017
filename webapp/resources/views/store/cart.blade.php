@@ -6,6 +6,16 @@
 		</div>
 
 		<div class="table-cart"> 
+		@if(count($cart))
+		<p>
+
+		<a href="{{route('cart-trash')}}" class="btn btn-danger">
+			Vaciar carrito <i class="fa fa-trash"></i>
+		</a>
+
+
+		</p>
+
 		<div class="table-responsive">
 			<table class="table table-striped table-hover table-bordered">
 				<thead>
@@ -37,6 +47,21 @@
 				</tbody>
 				</table>
 		</div>
+		@else
+			<h3><span class="label label-warning">No hay productos en el carrito</span></h3>
+
+		@endif
+		<hr>
+		<p>
+			<a href="{{route('home')}}" class="btn btn-primary">
+				<i class="fa fa-chevron-circle-left"></i> seguir comprando
+			</a>
+
+			<a href="#" class="btn btn-primary">
+			continuar<i class="fa fa-chevron-circle-right"></i> 
+			</a>
+
+		</p>
 		</div>
 	</div>
 
