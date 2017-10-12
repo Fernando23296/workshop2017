@@ -1,7 +1,7 @@
 @extends('store.template')
 
 @section('content')
-	<h1>Detalle del producto/h1>
+	<h1>Detalle del producto</h1>
 
 	<div class="product-block">
 		<img src="{{$product->imagen}}" width="300">

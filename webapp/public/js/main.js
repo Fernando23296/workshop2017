@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	$('#stores').pinterest_grid({
+	$('#products').pinterest_grid({
 		no_columns: 4,
 		padding_x: 10,
 		padding_y: 10,
