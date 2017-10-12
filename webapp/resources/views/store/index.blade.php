@@ -15,7 +15,7 @@
 					<p>{{ $product -> descripcion }}</p>
 					<h3><span class="label label-success">Precio: ${{ $product->precio}}</span></h3>
 					<p>
-					<a class="btn btn-warning" href="#"><i class="fa fa-cart-plus"></i>Comprar</a>
+					<a class="btn btn-warning" href="{{route('cart-add', $product->slug)}}"><i class="fa fa-cart-plus"></i>Comprar</a>
 					<a class="btn btn-primary" href="{{ route('product-detail', $product->slug) }}"><i class="fa fa-chevron-circle-right"></i> leer mas</a>
 					</p>
 

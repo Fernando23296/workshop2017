@@ -23,7 +23,7 @@
 					<p>{{ $product->descripcion }}</p>
 					<h3><span class="label label-success"> Precio: Bs. {{ $product->precio }}</span></h3>
 					<p>
-						<a class="btn btn-warning btn-clock" href="#">
+					<a class="btn btn-warning btn-clock" href="{{ route('cart-add', $product->slug)}}">
 						La quiero <i class="fa fa-cart-plus fa-2x"></i>
 						</a>
 					</p>

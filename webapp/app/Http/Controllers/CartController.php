@@ -17,7 +17,8 @@ class CartController extends Controller
     //SHOW CART
     public function show()
     {
-    	return \Session::get('cart');
+    	$cart = \Session::get('cart');
+    	return view('store.cart',compact('cart'));
     }
 
 
@@ -36,7 +37,15 @@ class CartController extends Controller
     }
     
     //DELETE ITEM
-    
+
+    public function delete(Product $product)
+    {
+    	$cart= \Session::get('cart');
+    	unset($cart[$product->slug]);
+    	\Session::put('cart',$cart);
+
+    	return redirect()->route('cart-show');
+    }    
     //UPDATE ITEM
     
     //TRASH CART

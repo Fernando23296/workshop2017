@@ -7,14 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand main-title" href="#">TUCU EXPRESS</a>
+      <a class="navbar-brand main-title" href="{{route('home')}}">TUCU EXPRESS</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <p class="navbar-text">Tienda Tucus</p>
       <ul class="nav navbar-nav navbar-right">
 
-      <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+      <li><a href="{{route('cart-show')}}"><i class="fa fa-shopping-cart"></i></a></li>
       <li><a href="#">Contacto</a></li>
       <li><a href="#">Conocenos</a></li>
       <li class="dropdown">
