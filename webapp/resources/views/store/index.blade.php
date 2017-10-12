@@ -11,7 +11,7 @@
 					<p>{{ $store -> descripcion }}</p>
 					<p> 
 					<a href="#">ver productos</a>
-					<a href="#">leer mas</a>
+					<a href="{{ route('store-detail', $store->slug) }}">leer mas</a>
 					</p>
 
 			</div>

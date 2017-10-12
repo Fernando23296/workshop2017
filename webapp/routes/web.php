@@ -11,5 +11,15 @@
 |
 */
 
-Route::get('/', 'StoreController@index');
+Route::get('/',[
+
+	'as'=> 'home',
+	'uses'=>'StoreController@index'
+]);
+
+Route::get('store/{slug}',[
+
+	'as'=> 'store-detail',
+	'uses'=>'StoreController@show'
+]);
 
