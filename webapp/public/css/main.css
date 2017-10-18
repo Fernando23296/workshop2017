@@ -1,16 +1,22 @@
 body
 {
 	background: orange;
+	font-family: 'Poiret One', cursive;
 }
-/*nav*/
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: 'Lobster Two', cursive;
+}
+
+/* Nav ----------*/
 .main-title
 {
-	color:orange !important;
-	font-size: 22px;
+	color: orange !important;
+	font-size: 26px;
 }
 
-/* footer...*/
-
+/* Footer -------*/
 footer
 {
 	background: #222;
@@ -41,8 +47,7 @@ ul.redes li a
 	width: 100px;
 }
 
-/*catalogo*/
-
+/* Catalogo -------------*/
 #products {
 position: relative;
 max-width: 100%;
@@ -74,34 +79,52 @@ margin-top: -5px;
 transition: all 0.3s ease-in-out;
 }
 
-/*detalle producto*/
+/* Detalle producto ---------*/
 .product-block
 {
-
 	background: #fff;
 	border-radius: 1em;
 	padding: 1em;
 }
 
-/*slider*/
-
+/* Slider ----------*/
 .navbar
 {
 	margin-bottom: 0;
 }
-
-/*carrito*/
-.table-cart
+/* sellers -----------*/
+.table-sellers
 {
-	background:#fff;
+	
+	font-family: 'Poiret One', cursive;
+	text-align: justify;
+	background: #fff;
+	margin-top: 30px; 
 	border-radius: 1em;
-	margin-bottom:30px;
-	padding:1em;
+	margin-bottom: 30px;
+	padding: 1em;
 }
 
+
+/* Carrito -----------*/
+.table-cart
+{
+	background: #fff;
+	border-radius: 1em;
+	margin-bottom: 30px;
+	padding: 1em;
+}
 
 .table-cart img
 {
 	width: 50px;
 }
 
+/* Detalle del pedido ------------*/
+.page
+{
+	background: #fff;
+	border-radius: 1em;
+	margin-bottom: 30px;
+	padding: 1em;
+}

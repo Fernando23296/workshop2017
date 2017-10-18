@@ -28,6 +28,30 @@ class StoreTableSeeder extends Seeder
 				'descripcion' => 'Las primeras tucumanas de la calle 2 de obrajes.',
 				'condicion' =>'1'
 			],
+			[
+				'idlocal' => '3',
+				'nombre' => 'Tucumanas Clemencia',
+				'slug' => 'tucumanas-clemencia',
+				'imagen' => 'https://media-cdn.tripadvisor.com/media/photo-s/03/36/0f/ab/el-caminito-empanadas.jpg',
+				'descripcion' => 'Las primeras tucumanas de la calle 2 de obrajes.',
+				'condicion' =>'1'
+			],
+			[
+				'idlocal' => '4',
+				'nombre' => 'Tucumanas Clemencia',
+				'slug' => 'tucumanas-clemencia',
+				'imagen' => 'https://media-cdn.tripadvisor.com/media/photo-s/03/36/0f/ab/el-caminito-empanadas.jpg',
+				'descripcion' => 'Las primeras tucumanas de la calle 2 de obrajes.',
+				'condicion' =>'1'
+			],
+			[
+				'idlocal' => '5',
+				'nombre' => 'Tucumanas Clemencia',
+				'slug' => 'tucumanas-clemencia',
+				'imagen' => 'https://media-cdn.tripadvisor.com/media/photo-s/03/36/0f/ab/el-caminito-empanadas.jpg',
+				'descripcion' => 'Las primeras tucumanas de la calle 2 de obrajes.',
+				'condicion' =>'1'
+			],
 
 
 			);
