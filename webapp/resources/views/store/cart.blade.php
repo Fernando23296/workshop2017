@@ -1,4 +1,4 @@
-@extends('store.template')
+@extends('store.template1')
 
 @section('content')
 	<div class="container text-center">
@@ -59,7 +59,7 @@
 					</table><hr>
 					<h3>
 					<span class="label label-success">
-						Total: ${{ number_format($total,2)}}
+						Total: ${{number_format($total,2)}}
 					</span>
 				</h3>
 				</div>
