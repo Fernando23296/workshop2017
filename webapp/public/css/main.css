@@ -46,6 +46,11 @@ ul.redes li a
 	height: 100px;
 	width: 100px;
 }
+#stores {
+position: relative;
+max-width: 100%;
+width: 100%;
+}
 
 /* Catalogo -------------*/
 #products {
@@ -78,6 +83,7 @@ margin-top: -5px;
 -o-transition: all 0.3s ease-in-out;
 transition: all 0.3s ease-in-out;
 }
+
 
 /* Detalle producto ---------*/
 .product-block

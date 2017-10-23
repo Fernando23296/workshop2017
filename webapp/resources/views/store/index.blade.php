@@ -1,6 +1,6 @@
 @extends('store.template')
 
-@section('content')
+@section('content-promo')
 
 	
 
@@ -18,6 +18,28 @@
 						<a class="btn btn-warning" href="{{route('cart-add', $product->slug)}}"><i class="fa fa-cart-plus"></i>Comprar</a>
 						<a class="btn btn-primary" href="{{ route('product-detail', $product->slug) }}"><i class="fa fa-chevron-circle-right"></i> leer mas</a>
 						</p>
+
+					</div>
+				</div>
+			@endforeach
+		</div>
+	</div>
+
+@stop
+
+@section('content')
+
+	
+<div class="container text-center">
+		
+		<div id="stores">
+			@foreach($stores as $stores)
+				<div class="product white-panel">
+					<h3>{{ $stores->nombre }}</h3><hr>
+					<img src="{{ $stores->imagen }}" width="200">
+					<div class = "product-info panel">
+						<p>{{ $stores -> descripcion }}</p>
+
 
 					</div>
 				</div>
