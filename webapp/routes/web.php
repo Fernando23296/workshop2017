@@ -76,4 +76,4 @@ Route::get('seller/show', [
 	'uses' => 'ClienteController@show'
 ]);
 
-Route:: resource('ventas/cliente','ClienteController');
+Route:: resource('store/products','ProductsController');

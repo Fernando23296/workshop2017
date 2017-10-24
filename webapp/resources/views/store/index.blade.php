@@ -10,7 +10,7 @@
 			@foreach($products as $product)
 				<div class="product white-panel">
 					<h3>{{ $product->nombre }}</h3><hr>
-					<img src="{{ $product->imagen }}" width="200">
+					<img src="{{asset( 'imagenes/products/'.$product->imagen )}}" width="200">
 					<div class = "product-info panel">
 						<p>{{ $product -> descripcion }}</p>
 						<h3><span class="label label-success">Precio: ${{ $product->precio}}</span></h3>
