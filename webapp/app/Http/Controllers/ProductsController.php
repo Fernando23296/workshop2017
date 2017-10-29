@@ -78,8 +78,6 @@ class ProductsController extends Controller
     public function update(ProductsFormRequest $request,$id)
     {
         $products=Product::findOrFail($id);
-
-        
         $products->codigo=$request->get('codigo');
         $products->nombre=$request->get('nombre');
         $products->slug=$request->get('slug');
@@ -100,7 +98,7 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         $products=Product::findOrFail($id);
-        $products->estado='inactivo';
+        $products->estado='Inactivo';
         $products->update();
         return Redirect::to('store/products');
     }

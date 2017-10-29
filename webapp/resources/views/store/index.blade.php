@@ -35,8 +35,9 @@
 		<div id="stores">
 			@foreach($stores as $stores)
 				<div class="product white-panel">
-					<h3>{{ $stores->nombre }}</h3><hr>
 					<img src="{{ $stores->imagen }}" width="200">
+					<h3>{{ $stores->nombre }}</h3><hr>
+					
 					<div class = "product-info panel">
 						<p>{{ $stores -> descripcion }}</p>
 
