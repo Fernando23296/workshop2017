@@ -1,4 +1,4 @@
-@extends('store.template')
+@extends('store.template1')
 
 @section('content')
 
@@ -12,7 +12,7 @@
 
 		<div class="col-md-6">
 			<div class="product-block">
-				<img src= "{{ $product->imagen}}"> 
+				<img src= "{{asset( 'imagenes/products/'.$product->imagen )}}"> 
 
 			</div>
 		</div>
