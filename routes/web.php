@@ -42,8 +42,25 @@ Route::get('cart/update/{product}/{quantity?}', [
 	'as' => 'cart-update',
 	'uses' => 'CartController@update'
 ]);
-// Authentication routes...
-Route::get('auth/login', [
+
+
+//aun no se sabe si esto esta bien
+/*
+// route to show the login form
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+
+// route to process the form
+Route::post('login', array('uses' => 'HomeController@doLogin'));
+*/
+
+Route::get('/home','HomeController@index');
+Route::get('/admin','AdminController@index');
+
+
+
+
+//Authentication routes...
+/*Route::get('auth/login', [
 	'as' => 'login-get',
 	'uses' => 'Auth\AuthController@getLogin'
 ]);
@@ -68,7 +85,7 @@ Route::post('auth/register', [
 	'as' => 'register-post',
 	'uses' => 'Auth\AuthController@postRegister'
 ]);
-
+*/
 // Vendedores------
 Route::get('seller/show', [
 	'as' => 'seller-show',
@@ -76,3 +93,22 @@ Route::get('seller/show', [
 ]);
 
 Route:: resource('store/products','ProductsController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
