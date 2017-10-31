@@ -69,9 +69,13 @@ Route::prefix('admin')->group(function(){
 
 
 
+/*
+
+
+
 
 //Authentication routes...
-/*Route::get('auth/login', [
+Route::get('auth/login', [
 	'as' => 'login-get',
 	'uses' => 'Auth\AuthController@getLogin'
 ]);
@@ -96,7 +100,17 @@ Route::post('auth/register', [
 	'as' => 'register-post',
 	'uses' => 'Auth\AuthController@postRegister'
 ]);
+
+
+
+
+
 */
+
+
+
+
+
 // Vendedores------
 Route::get('seller/show', [
 	'as' => 'seller-show',

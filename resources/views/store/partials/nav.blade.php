@@ -17,7 +17,6 @@
       <li><a href="{{route('cart-show')}}"><i class="fa fa-shopping-cart"></i></a></li>
       <li><a href="#">Contacto</a></li>
       <li><a href="#">Conocenos</a></li>
-      @include('store.partials.menu-user')
       </ul>
     </div>
   </div>
