@@ -56,12 +56,15 @@ Route::post('login', array('uses' => 'HomeController@doLogin'));
 Auth::routes();
 
 Route::get('/home','HomeController@index');
+Route::get('/users/logout', 'Auth\loginController@userLogout')->name('user.logout');
 
 Route::prefix('admin')->group(function(){
 
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::get('/','AdminController@index')->name('admin.dashboard');
+	Route::get('/Logout','Auth\AdminLoginController@logout')->name('admin.logout');
+
 
 
 });
