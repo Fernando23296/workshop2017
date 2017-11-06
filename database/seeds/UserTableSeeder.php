@@ -21,8 +21,8 @@ class UserTableSeeder extends Seeder
 				'updated_at'=>new DateTime
 			],
 			[
-				'name' => 'bruno',
-				'email' => 'bruno@gmail.com',
+				'name' => 'fernando',
+				'email' => 'fernando@gmail.com',
 				'password' =>\Hash::make('123456'),
 				'created_at'=>new DateTime,
 				'updated_at'=>new DateTime

@@ -9,7 +9,9 @@
 
                 <div class="panel-body">
                     
-                    YO ARE LOGGED AS AN ADMIN
+                  @component ('components.who')
+                    
+                    @endcomponent
                 </div>
             </div>
         </div>
