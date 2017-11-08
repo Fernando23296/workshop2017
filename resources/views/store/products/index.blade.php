@@ -25,20 +25,20 @@
 							<th>Estado</th>
 							<th>Opciones</th>
 						</thead> 
-							@foreach ($products as $prod)
+							@foreach ($products as $prods)
 							<tr>
-								<td>{{$prod->idproducto}}</td>	
-								<td>{{$prod->nombre}}</td>
-								<td>{{$prod->codigo}}</td>
-								<td>{{$prod->stores}}</td>
-								<td>{{$prod->stock}}</td>
+								<td>{{$prods->idproducto}}</td>	
+								<td>{{$prods->nombre}}</td>
+								<td>{{$prods->codigo}}</td>
+								<td>{{$prods->stores}}</td>
+								<td>{{$prods->stock}}</td>
 								<td>
-									<img src="{{asset ('imagenes/products/'.$prod->imagen)}}" alt="{{$prod->idproducto}}" height="100px" width="100px" class="img-thumbnail"></img>
+									<img src="{{asset ('imagenes/products/'.$prods->imagen)}}" alt="{{$prods->idproducto}}" height="100px" width="100px" class="img-thumbnail"></img>
 								</td>
-								<td>{{$prod->estado}}</td>
+								<td>{{$prods->estado}}</td>
 								<td>
-								<a href="{{URL::action('ProductsController@edit',$prod->idproducto)}}"><button class="btn btn-info">Editar</button></a>
-								<a href="" data-target="#modal-delete-{{$prod->idproducto}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+								<a href="{{URL::action('ProductsController@edit',$prods->idproducto)}}"><button class="btn btn-info">Editar</button></a>
+								<a href="" data-target="#modal-delete-{{$prods->idproducto}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 								</td>
 							</tr>
 							@include ('store.products.modal')

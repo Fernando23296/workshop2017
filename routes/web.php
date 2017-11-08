@@ -13,7 +13,7 @@ Route::bind('product', function($slug){
 	return App\Models\Product::where('slug', $slug)->first();
 });
 Route::get('/', [
-	'as' => 'home',
+	'as' => 'casa',
 	'uses' => 'StoreController@index'
 ]);
 Route::get('product/{slug}', [
@@ -140,3 +140,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('order-detail', [
+	'middleware' => 'auth:admin',
+	'as' => 'order-detail',
+	'uses' => 'CartController@orderDetail'
+]);
