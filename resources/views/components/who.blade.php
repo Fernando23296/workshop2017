@@ -16,18 +16,18 @@
 		Has ingresado como <strong> ADMINISTRADOR </strong>
 	</p></li>
 
-</ul>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">Menu Administrador</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="{{ url('/store/products') }}"><strong>Añadir Productos</strong></a></li>
-      <li><a href="{{ url('/register') }}"><strong>Añadir Usuarios</strong></a></li>
-    </ul>
-  </div>
-</nav>
+	</ul>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand">Menu Administrador</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li><a href="{{ url('/store/products') }}"><strong>Añadir Productos</strong></a></li>
+	      <li><a href="{{ url('/register') }}"><strong>Añadir Usuarios</strong></a></li>
+	    </ul>
+	  </div>
+	</nav>
                   
 @else
 	<li class="list-group-item"><p class="text-danger">
