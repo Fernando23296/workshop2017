@@ -16,7 +16,7 @@ class AdminTableSeeder extends Seeder
 
 			[
 				'name' => 'bruno',
-				'email' => 'bruno@gmail.com',
+				'email' => 'fernando23296@gmail.com',
 				'password' =>\Hash::make('123456'),
 				'job_title' => 'Developer',
 				'created_at'=>new DateTime,
