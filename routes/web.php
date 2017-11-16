@@ -19,8 +19,14 @@ Route::get('/', [
 
 Route::get('local', [
 	'as' => 'local',
-	'uses' => 'StoreController@index1'
+	'uses' => 'StoreController@local'
 ]);
+
+Route::get('local{idlocal}', [
+	'as' => 'local-producto',
+	'uses' => 'StoreController@localproducto'
+]);
+
 
 Route::get('product/{slug}', [
 	'as' => 'product-detail',

@@ -27,7 +27,8 @@
 											<img src="{{asset( $store->imagen )}}" width="200">
 											<div class = "store-info panel">
 												<p>{{ $store -> descripcion }}</p>
-												<a class="btn btn-primary" href="#"><i class="fa fa-chevron-circle-right"></i> Ver Productos</a>
+												<h3><span class="label label-success">{{$store->slug}}</span></h3>
+												<a class="btn btn-primary" href="{{ route('local-producto', $store->idlocal)}}"><i class="fa fa-chevron-circle-right"></i> Ver Productos</a>
 											</div>
 										</div>
 									@endforeach
