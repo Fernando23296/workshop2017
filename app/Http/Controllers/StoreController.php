@@ -56,7 +56,7 @@ class StoreController extends Controller
             ->join('stores as c', 'a.idlocal','=','c.idlocal')
             ->select('a.idproducto','a.nombre','a.codigo','a.slug','a.stock',
             'c.nombre as stores','a.descripcion','a.imagen','a.precio','a.estado')
-            ->where('a.nombre','LIKE','%'.$request.'%')
+            ->where('c.nombre','LIKE','%'.$request.'%')
             ->orwhere('a.codigo','LIKE','%'.$request.'%')
             ->orderBy('a.idproducto','desc')
             ->paginate(7);
