@@ -16,6 +16,12 @@ Route::get('/', [
 	'as' => 'casa',
 	'uses' => 'StoreController@index'
 ]);
+
+Route::get('local', [
+	'as' => 'local',
+	'uses' => 'StoreController@index1'
+]);
+
 Route::get('product/{slug}', [
 	'as' => 'product-detail',
 	'uses' => 'StoreController@show'

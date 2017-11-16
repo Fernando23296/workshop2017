@@ -15,9 +15,8 @@ class StoreController extends Controller
     public function index()
     {
     	$products= Product::all();
-    	$stores= Store::all();
-        //dd($stores);
-    	return view('store.index',compact('products','stores'));
+    	//dd($stores);
+    	return view('store.index',compact('products'));
 
         
       
@@ -28,5 +27,14 @@ class StoreController extends Controller
     	$product = Product::where('slug', $slug)->first();
     	//dd($store);
     	return view('store.show',compact('product'));
+    }
+    public function index1()
+    {
+        $stores= Store::all();
+        //dd($stores);
+        return view('store.locales',compact('stores'));
+
+        
+      
     }
 }
