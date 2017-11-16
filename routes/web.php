@@ -65,6 +65,10 @@ Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 */
 
+Route::get('admin/home',function(){
+	return view('admin.home');
+});
+
 Auth::routes();
 
 Route::get('/home','HomeController@index');
