@@ -27,8 +27,16 @@
 											<img src="{{asset( $store->imagen )}}" width="200">
 											<div class = "store-info panel">
 												<p>{{ $store -> descripcion }}</p>
-												<h3><span class="label label-success">{{$store->slug}}</span></h3>
-												<a class="btn btn-primary" href="{{ route('local-producto', $store->nombre)}}"><i class="fa fa-chevron-circle-right"></i> Ver Productos</a>
+													<h3>
+													@if($store->slug == 'Activo')
+													<span class="label label-success">{{$store->slug}}</span>
+													</h3>
+													<a class="btn btn-primary" href="{{ route('local-producto', $store->nombre)}}"><i class="fa fa-chevron-circle-right"></i> Ver Productos</a>
+													@else
+													<h2><span class="label label-danger">{{$store->slug}}</span></h2>
+													@endif
+												
+												
 											</div>
 										</div>
 									@endforeach

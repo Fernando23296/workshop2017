@@ -140,7 +140,20 @@ Route::get('seller/show', [
 	'uses' => 'ClienteController@show'
 ]);
 
+
+//erick
 Route:: resource('store/products','ProductsController');
+Route::get('edit/{id}','ProductsController@edit')->name('edit');
+Route::post('update/{id}','ProductsController@update')->name('update');
+Route::delete('delete/{id}','ProductsController@delete')->name('delete');
+
+
+//erick
+
+
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

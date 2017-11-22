@@ -19,7 +19,8 @@
 							<th>Id</th>
 							<th>Nombre</th>
 							<th>Codigo</th>
-							<th>Categoria</th>
+							<th>Local</th>
+							<th>precio</th>
 							<th>Stock</th>
 							<th>Imagen</th>
 							<th>Estado</th>
@@ -31,13 +32,14 @@
 								<td>{{$prods->nombre}}</td>
 								<td>{{$prods->codigo}}</td>
 								<td>{{$prods->stores}}</td>
+								<td>{{$prods->precio}}</td>
 								<td>{{$prods->stock}}</td>
 								<td>
 									<img src="{{asset ('imagenes/products/'.$prods->imagen)}}" alt="{{$prods->idproducto}}" height="100px" width="100px" class="img-thumbnail"></img>
 								</td>
-								<td>{{$prods->estado}}</td>
+								<td>{{$prods->slug}}</td>
 								<td>
-								<a href="{{URL::action('ProductsController@edit',$prods->idproducto)}}"><button class="btn btn-info">Editar</button></a>
+								<a href="{{route('edit',$prods->idproducto)}}"><button class="btn btn-info">Editar</button></a>
 								<a href="" data-target="#modal-delete-{{$prods->idproducto}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 								</td>
 							</tr>
