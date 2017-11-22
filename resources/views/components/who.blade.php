@@ -4,6 +4,7 @@
 	  <li class="list-group-item"><p class="text-sucess">
 		Has ingresado como <strong> USUARIO </strong>
 	</p></li>
+	
 @else
 	  <li class="list-group-item"><p class="text-danger">
 		No has ingresado como <strong> USUARIO</strong>

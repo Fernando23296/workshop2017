@@ -1,13 +1,14 @@
-@extends('layouts.app')
+@extends('store.template')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">ADMIN Login</div>
+<div class="container text-center">
+    <div class="page-header">
+        <h1> <i class="fa fa-user"></i>Iniciar sesion </h1>
+    </div>
 
-                <div class="panel-body">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="page">
                     <form class="form-horizontal" method="POST" action="{{ route('admin.login.submit') }}">
                         {{ csrf_field() }}
 

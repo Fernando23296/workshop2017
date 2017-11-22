@@ -22,7 +22,7 @@
             <i class="fa fa-user"></i> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{{ route('logout') }}">Finalizar sesión</a></li>
+            <li><a href="{{ route('admin.logout') }}">Finalizar sesión</a></li>
           </ul>
         </li>
       </ul>
