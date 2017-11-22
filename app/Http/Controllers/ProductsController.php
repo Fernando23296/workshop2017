@@ -30,7 +30,7 @@ class ProductsController extends Controller
             $products=DB::table('products as a')
             ->join('stores as c', 'a.idlocal','=','c.idlocal')
             ->select('a.idproducto','a.nombre','a.codigo','a.slug','a.stock',
-            'c.nombre as stores','a.descripcion','a.imagen','a.precio','a.estado')
+            'c.nombre as stores','a.descripcion','a.imagen','a.precio','a.estado','a.idlocal','c.slug')
             ->where('a.nombre','LIKE','%'.$query.'%')
             ->orwhere('a.codigo','LIKE','%'.$query.'%')
             ->orderBy('a.idproducto','desc')
@@ -69,13 +69,19 @@ class ProductsController extends Controller
     {
         return view("store.products.show",["products"=>Product::findOrFail($id)]);
     }
-    public function edit($id)
+    /*public function edit($id)
     {
         $products=Product::findOrFail($id);
         $stores=DB::table('stores')->where('condicion','=','1')->get();
         return view("store.products.edit",["products"=>$products,"stores"=>$stores]);
+    }*/
+    public function edit($id)
+    {
+        $products = Product::find($id);
+        $stores=DB::table('stores')->where('condicion','=','1')->get();
+        return view('store.products.edit1',["products"=>$products,"stores"=>$stores]);
     }
-    public function update(ProductsFormRequest $request,$id)
+    /*public function update(ProductsFormRequest $request,$id)
     {
         $products=Product::findOrFail($id);
         $products->codigo=$request->get('codigo');
@@ -94,7 +100,29 @@ class ProductsController extends Controller
         $products->idlocal=$request->get('idlocal');
         $products->update();
         return Redirect::to('store/products');
+    }*/
+    public function update(ProductsFormRequest $request,$id)
+    {
+        
+        $products=Product::findOrFail($id);
+        $products->codigo=$request->get('codigo');
+        $products->nombre=$request->get('nombre');
+        $products->slug=$request->get('slug');
+        $products->stock=$request->get('stock');
+        $products->descripcion=$request->get('descripcion');
+        
+
+            if(Input::hasfile('imagen')){
+                $file=Input::file('imagen');
+                $file->move(public_path().'/imagenes/products/',$file->getClientOriginalName());
+                $products->imagen=$file->getClientOriginalName();
+            }
+        $products->precio=$request->get('precio');
+        $products->idlocal=$request->get('idlocal');
+        $products->update();
+        return Redirect::to('store/products');
     }
+
     public function destroy($id)
     {
         $products=Product::findOrFail($id);
