@@ -147,6 +147,11 @@ Route::get('edit/{id}','ProductsController@edit')->name('edit');
 Route::post('update/{id}','ProductsController@update')->name('update');
 Route::delete('delete/{id}','ProductsController@delete')->name('delete');
 
+Route::get('store/show', [
+	'as' => 'store-show',
+	'uses' => 'StoreController@localshow'
+]);
+
 
 //erick
 
