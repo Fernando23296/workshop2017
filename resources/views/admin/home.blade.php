@@ -29,17 +29,17 @@
         
         <div class="row">
             
-            <div class="col-md-6">
+          <!--  <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-cc-paypal  icon-home"></i>
                     <a href="#" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
                 </div>
-            </div> 
+            </div> -->
             
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-users  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
+                    <a href="{{ route('register') }}" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
                 </div>
             </div>
                     
