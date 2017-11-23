@@ -43,9 +43,7 @@ class StoreController extends Controller
         $stores= Store::all();
         //dd($stores);
         return view('store.locales',compact('stores'));
-
-        
-      
+ 
     }
     public function localproducto($request)
     {
@@ -66,6 +64,14 @@ class StoreController extends Controller
 
         
       
+    }
+    
+    public function localshow()
+    {
+        $stores= Store::all();
+        //dd($stores);
+        return view('store.showlocal',compact('stores'));
+ 
     }
 
 }

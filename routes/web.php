@@ -21,13 +21,21 @@ Route::get('local', [
 	'as' => 'local',
 	'uses' => 'StoreController@local'
 ]);
-
+///////////////////////////////////
 Route::get('local{idlocal}', [
 	'as' => 'local-producto',
 	'uses' => 'StoreController@localproducto'
 ]);
+Route::get('store/products{idlocal}', [
+	'as' => 'store-products',
+	'uses' => 'ProductsController@index'
+]);
+Route::get('store/state/{idlocal}', [
+	'as' => 'store-state',
+	'uses' => 'ProductsController@state'
+]);
 
-
+////////////////////////////////////////////////
 Route::get('product/{slug}', [
 	'as' => 'product-detail',
 	'uses' => 'StoreController@show'
@@ -143,9 +151,16 @@ Route::get('seller/show', [
 
 //erick
 Route:: resource('store/products','ProductsController');
+
 Route::get('edit/{id}','ProductsController@edit')->name('edit');
 Route::post('update/{id}','ProductsController@update')->name('update');
 Route::delete('delete/{id}','ProductsController@delete')->name('delete');
+
+
+Route::get('store/show', [
+	'as' => 'store-show',
+	'uses' => 'StoreController@localshow'
+]);
 
 
 //erick
