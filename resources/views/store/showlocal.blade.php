@@ -33,10 +33,10 @@
 													@if($store->slug == 'Activo')
 													<span class="label label-success">{{$store->slug}}</span>
 													</h3>
-													<a class="btn btn-primary" href="{{ route('local-producto', $store->nombre)}}"><i class="fa fa-chevron-circle-right"></i>DETALLE PRODUCTOS  </a>
+													<a class="btn btn-primary" name="searchText" href="{{ route('store-products', $store->nombre)}}"><i class="fa fa-chevron-circle-right"></i>DETALLE LOCAL  </a>
 													@else
 													<h2><span class="label label-danger">{{$store->slug}}</span></h2>
-													<a class="btn btn-primary" href="{{ route('local-producto', $store->nombre)}}"><i class="fa fa-chevron-circle-right"> </i>DETALLE PRODUCTOS  </a>
+													<a class="btn btn-primary" href="{{ route('store-products', $store->nombre)}}"><i class="fa fa-chevron-circle-right"> </i>DETALLE LOCAL  </a>
 													@endif
 											</div>
 										</div>
@@ -46,7 +46,7 @@
 						</div>
 			
 		
-	</div><hr>
+	</div>
 	<p><a class="btn btn-primary" href="{{ route('home') }}"> <i class="fa fa-chevron-circle-left"></i>Regresar</a></p>
 </div>
 

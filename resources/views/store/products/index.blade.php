@@ -8,7 +8,18 @@
 		 <div class="table-cart">
 		 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 		 		<h3>Listado de Productos <a href="products/create"><button class="btn btn-success">nuevo</button></a></h3>
-		 		@include('store.products.search')
+		 		
+		 	</div>
+		 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		 		@foreach ($products as $prod)
+		 		<h3>Estado del local
+		 			@if($prod->slug =='Activo')
+		 			<a href="#"><button class="btn btn-success">activo</button></a>
+		 			@else
+		 			<a href="#"><button class="btn btn-danger">inactivo</button></a>
+		 			@endif
+		 		</h3>
+		 		@endforeach
 		 	</div>
 
 		<div class="row">
@@ -40,10 +51,10 @@
 								<td>{{$prods->slug}}</td>
 								<td>
 								<a href="{{route('edit',$prods->idproducto)}}"><button class="btn btn-info">Editar</button></a>
-								<a href="" data-target="#modal-delete-{{$prods->idproducto}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+								<a href="" data-target="#" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 								</td>
 							</tr>
-							@include ('store.products.modal')
+							
 							@endforeach
 						
 					</table>
