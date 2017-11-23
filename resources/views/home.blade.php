@@ -8,8 +8,6 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-
-                    {!! $chart->render() !!}
                     @component ('components.who')
                     
                     @endcomponent

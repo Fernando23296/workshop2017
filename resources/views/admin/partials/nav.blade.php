@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <p class="navbar-text"><i class="fa fa-dashboard"></i> Dashboard</p>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Categorias</a></li>
+        <li><a href="#">Reportes</a></li>
         <li><a href="#">Productos</a></li>
         <li><a href="#">Pedidos</a></li>
         <li><a href="#">Usuarios</a></li>
