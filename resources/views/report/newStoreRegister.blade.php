@@ -1,0 +1,1 @@
+newStoreRegister.blade.php

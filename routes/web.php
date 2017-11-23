@@ -179,3 +179,11 @@ Route::get('order-detail', [
 	'as' => 'order-detail',
 	'uses' => 'CartController@orderDetail'
 ]);
+
+Route::get('charts','chartController@index');
+
+
+
+
+
+
