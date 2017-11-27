@@ -105,6 +105,7 @@ class ProductTableSeeder extends Seeder
 				'idlocal'=>'5'
 			],
 
+
 			);
 
 			Product::Insert($data);
