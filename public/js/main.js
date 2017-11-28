@@ -28,17 +28,6 @@ $(document).ready(function() {
 		single_column_breakpoint: 700
 	});
 
-	// Update item cart
-	$(".btn-update-item").on('click', function(e){
-		e.preventDefault();
-		
-		var id = $(this).data('id');
-		var href = $(this).data('href');
-		var quantity = $("#product1_" + id).val();
-
-		window.location.href = href + "/" + quantity;
-	});
-
 });
 $(document).ready(function() {
 	$('#products2').pinterest_grid({
@@ -49,15 +38,6 @@ $(document).ready(function() {
 		single_column_breakpoint: 700
 	});
 
-	// Update item cart
-	$(".btn-update-item").on('click', function(e){
-		e.preventDefault();
-		
-		var id = $(this).data('id');
-		var href = $(this).data('href');
-		var quantity = $("#product2_" + id).val();
-
-		window.location.href = href + "/" + quantity;
-	});
+	
 
 });
