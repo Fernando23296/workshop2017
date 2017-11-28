@@ -42,6 +42,12 @@
                     <a href="{{ route('register') }}" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="panel">
+                    <i class="fa fa-list-alt icon-home"></i>
+                    <a href="{{url('store/show')}}" class="btn btn-warning btn-block btn-home-admin">CATEGORÍAS</a>
+                </div>
+            </div>
                     
         </div>
         
