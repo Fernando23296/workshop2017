@@ -43,7 +43,29 @@ class ProductsController extends Controller
         $stores=DB::table('stores')->where('condicion','=','1')->get();       
         return view("store.products.create",["stores"=>$stores]);
     }
-    
+    public function store (ProductsFormRequest $request)
+    {
+        $products= new Product;
+        
+        $products->codigo=$request->get('codigo');
+        $products->nombre=$request->get('nombre');
+        $products->slug=$request->get('slug');
+        $products->stock=$request->get('stock');
+        $products->tipo=$request->get('tipo');
+        $products->descripcion=$request->get('descripcion');
+        $products->estado='Activo';
+        $products->idlocal=$request->get('idlocal');
+
+        	if(Input::hasfile('imagen')){
+        		$file=Input::file('imagen');
+        		$file->move(public_path().'/imagenes/products/',$file->getClientOriginalName());
+        		$products->imagen=$file->getClientOriginalName();
+            }
+        $products->precio=$request->get('precio');
+        $products->save();
+        return Redirect::to('store/show');
+
+    }
     public function show($id)
     {
         return view("store.products.show",["products"=>Product::findOrFail($id)]);

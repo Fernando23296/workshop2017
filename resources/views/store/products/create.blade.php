@@ -60,6 +60,12 @@
 	            	<input type="text" name="stock" required value="{{old('stock')}}" class="form-control" placeholder="stock del producto">
 	            	</div>
             	</div>
+                  <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                        <div class="form-group">
+                        <label for="tipo">Tipo</label>
+                        <input type="text" name="tipo" required value="{{old('tipo')}}" class="form-control" placeholder="tipo de producto">
+                        </div>
+                  </div>
             	<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             		<div class="form-group">
 	            	<label for="descripcion">Descripcion</label>
