@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>DELIVER FOOD</title>
+	<title>DELIVERY FOOD</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Poiret+One|Lobster+Two' rel='stylesheet' type='text/css'>
@@ -10,9 +10,6 @@
 </head>
 <body>
 
-	@if(\Session::has('message'))
-		@include('admin.partials.message')
-	@endif
 	
 	@include('admin.partials.nav')
 
