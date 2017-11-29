@@ -11,23 +11,30 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
+
+
+
+
         $data = array(
 
 			[
-				'tipo_rol' => 'administrador',
-				'valor' => '1',
+				'idrol_usuario' => '1',
+				'idrol' => '1',
+				'iduser' => '1',
 			],
 			[
-				'tipo_rol' => 'usuario',
-				'valor' => '2',
+				'idrol_usuario' => '1',
+				'idrol' => '2',
+				'iduser' => '2',
 			],
 			[
-				'tipo_rol' => 'cliente',
-				'valor' => '3',
+				'idrol_usuario' => '1',
+				'idrol' => '1',
+				'iduser' => '2',
 			],
 			);
 
-			Admin::Insert($data);
+			Roles::Insert($data);
 
     }
     }

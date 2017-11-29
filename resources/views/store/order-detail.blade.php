@@ -39,15 +39,13 @@
 						Total: ${{ number_format($total, 2) }}
 					</span>
 				</h3><hr>
+				<center>
 				<p>
 					<a href="{{ route('cart-show') }}" class="btn btn-primary">
 						<i class="fa fa-chevron-circle-left"></i> Regresar
 					</a>
-
-					<a href="#" class="btn btn-warning">
-						Pagar con <!-- <i class="fa fa-cc-paypal fa-2x"></i> -->
-					</a>
 				</p>
+			</center>
 			</div>
 		</div>
 	</div>

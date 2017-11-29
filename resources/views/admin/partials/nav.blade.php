@@ -16,15 +16,13 @@
         <li><a href="#">Reportes</a></li>
         <li><a href="#">Productos</a></li>
         <li><a href="#">Pedidos</a></li>
-        <li><a href="#">Usuarios</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <i class="fa fa-user"></i> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="{{ route('admin.logout') }}">Finalizar sesión</a></li>
-          </ul>
-        </li>
+        
       </ul>
     </div>
   </div>
