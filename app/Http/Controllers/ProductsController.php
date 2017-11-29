@@ -35,7 +35,7 @@ class ProductsController extends Controller
             ->where('c.nombre','LIKE','%'.$request.'%')
             ->orderBy('a.idproducto','desc')
             ->paginate(7);
-            return view('store.products.index',["products"=>$products,"searchText"=>$request]);
+            return view('store.products.index',["products"=>$products]);
         }
     }
     public function create()
@@ -107,8 +107,16 @@ class ProductsController extends Controller
     }
     public function local($id)
     {
+        
         $store=Store::findOrFail($id);
+        if($store->slug=='Activo')
+        {
         $store->slug='Inactivo';
+        }
+        else{
+         $store->slug='Activo';   
+        }
+
         $store->update();
         return Redirect::to('store/show');
     }

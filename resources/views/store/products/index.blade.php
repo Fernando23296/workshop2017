@@ -14,10 +14,10 @@
 		 		@foreach ($products as $prod)
 		 		<h3>Estado del local
 		 			@if($prod->slug =='Activo')
-		 			<a href="#"><button class="btn btn-success">activo</button></a>
+		 			<a href="{{route('local-open',$prod->idlocal)}}"><button class="btn btn-success">activo</button></a>
 		 			@break;
 		 			@else
-		 			<a href="#"><button class="btn btn-danger">inactivo</button></a>
+		 			<a href="{{route('local-open',$prod->idlocal)}}"><button class="btn btn-danger">inactivo</button></a>
 		 			@break;
 		 			@endif
 		 		</h3>
