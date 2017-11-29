@@ -31,7 +31,7 @@ class ProductsController extends Controller
             $products=DB::table('products as a')
             ->join('stores as c', 'a.idlocal','=','c.idlocal')
             ->select('a.idproducto','a.nombre','a.codigo','a.slug','a.stock',
-            'c.nombre as stores','a.descripcion','a.imagen','a.precio','a.estado','a.nombre','c.slug')
+            'c.nombre as stores','a.descripcion','a.imagen','a.precio','a.estado','a.nombre','c.slug','a.idlocal')
             ->where('c.nombre','LIKE','%'.$request.'%')
             ->orderBy('a.idproducto','desc')
             ->paginate(7);
@@ -43,28 +43,7 @@ class ProductsController extends Controller
         $stores=DB::table('stores')->where('condicion','=','1')->get();       
         return view("store.products.create",["stores"=>$stores]);
     }
-    public function store (ProductsFormRequest $request)
-    {
-        $products= new Product;
-        
-        $products->codigo=$request->get('codigo');
-        $products->nombre=$request->get('nombre');
-        $products->slug=$request->get('slug');
-        $products->stock=$request->get('stock');
-        $products->descripcion=$request->get('descripcion');
-        $products->estado='Activo';
-        $products->idlocal=$request->get('idlocal');
-
-        	if(Input::hasfile('imagen')){
-        		$file=Input::file('imagen');
-        		$file->move(public_path().'/imagenes/products/',$file->getClientOriginalName());
-        		$products->imagen=$file->getClientOriginalName();
-            }
-        $products->precio=$request->get('precio');
-        $products->save();
-        return Redirect::to('store/show');
-
-    }
+    
     public function show($id)
     {
         return view("store.products.show",["products"=>Product::findOrFail($id)]);
@@ -99,14 +78,18 @@ class ProductsController extends Controller
         return Redirect::to('store/show');
     }
 
-    /*public function destroy($id)
+    public function delete($id)
     {
-        $products=Product::findOrFail($id);
-        $products->estado='Inactivo';
-        $products->update();
-        return Redirect::to('store/products');
-    }*/
-    
+       Product::find($id)->delete();
+        return redirect(route('store-show'))->with('successMsg','Producto Borrado');
+    }
+    public function local($id)
+    {
+        $store=Store::findOrFail($id);
+        $store->slug='Inactivo';
+        $store->update();
+        return Redirect::to('store/show');
+    }
     
     
     

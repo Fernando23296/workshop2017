@@ -155,7 +155,7 @@ Route:: resource('store/products','ProductsController');
 Route::get('edit/{id}','ProductsController@edit')->name('edit');
 Route::post('update/{id}','ProductsController@update')->name('update');
 Route::delete('delete/{id}','ProductsController@delete')->name('delete');
-
+Route::get('local/{id}','ProductsController@local')->name('local');
 
 Route::get('store/show', [
 	'as' => 'store-show',

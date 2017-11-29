@@ -15,8 +15,10 @@
 		 		<h3>Estado del local
 		 			@if($prod->slug =='Activo')
 		 			<a href="#"><button class="btn btn-success">activo</button></a>
+		 			@break;
 		 			@else
 		 			<a href="#"><button class="btn btn-danger">inactivo</button></a>
+		 			@break;
 		 			@endif
 		 		</h3>
 		 		@endforeach
@@ -51,7 +53,20 @@
 								<td>{{$prods->slug}}</td>
 								<td>
 								<a href="{{route('edit',$prods->idproducto)}}"><button class="btn btn-info">Editar</button></a>
-								<a href="" data-target="#" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+								
+								<form method="POST" id="delete-form-{{ $prods->idproducto }}" action="{{ route('delete',$prods->idproducto) }}" style="display: none;"> 
+						            {{ csrf_field() }}
+						            {{ method_field('delete') }}
+						            
+						         </form>
+						            
+						        <button onclick="if(confirm('Esta seguro de eliminar el producto')){
+						              event.preventDefault();
+						              document.getElementById('delete-form-{{ $prods->idproducto }}').submit();
+						            }else{
+						              event.preventDefault();
+						            }"  class="btn btn-danger">Eliminar
+						        </button>
 								</td>
 							</tr>
 							
