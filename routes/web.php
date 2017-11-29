@@ -146,17 +146,6 @@ Route::post('auth/register', [
 
 */
 
-
-
-
-
-// Vendedores------
-Route::get('seller/show', [
-	'as' => 'seller-show',
-	'uses' => 'ClienteController@show'
-]);
-
-
 //erick
 Route:: resource('store/products','ProductsController');
 
@@ -170,6 +159,11 @@ Route::get('store/show', [
 	'uses' => 'StoreController@localshow'
 ]);
 
+Route::get('order-detail', [
+	'middleware' => 'auth',
+	'as' => 'order-detail',
+	'uses' => 'CartController@orderDetail'
+]);
 
 //erick
 
@@ -196,12 +190,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('order-detail', [
-	'middleware' => 'auth:admin',
-	'as' => 'order-detail',
-	'uses' => 'CartController@orderDetail'
-]);
 
 Route::get('charts','chartController@index');
 
